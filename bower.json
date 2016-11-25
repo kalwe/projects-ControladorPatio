@@ -1,0 +1,26 @@
+{
+  "name": "patio",
+  "description": "Um controlador de fluxo de entrada e saida de veiculos no patio de um estacionamento",
+  "main": "server.js",
+  "authors": [
+    "Kalwe Caramalac <kalwe.dev@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "estacionamento"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.5.8",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "ejs": "^1.0.0"
+  }
+}
