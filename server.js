@@ -23,7 +23,7 @@ app.engine('html', require('ejs').renderFile);
 
 // server http get request/response
 app.get('/', function (req, res) {
-	res.render('index.ejs');
+	res.render('index.html');
 	console.log('GET: 200 index');
 });
 

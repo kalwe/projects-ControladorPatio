@@ -6,12 +6,14 @@
 	margin : 15px;
 }
 
-.divBtnAcessar {
+.btnAcessar {
 	position: absolute;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .btn {
-	position: relative;	
+	position: absolute;	
+	margin-left: auto;
+	margin-right: auto;
 }
