@@ -9,7 +9,7 @@
   "keywords": [
     "estacionamento"
   ],
-  "homepage": "",
+  "homepage": "https://github.com/kalwe/projects-ControladorPatio",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -18,9 +18,8 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "angularjs#^1.5.8",
+    "angular": "angularjs#^1.5.9",
     "bootstrap": "^3.3.7",
-    "font-awesome": "^4.7.0",
-    "ejs": "^1.0.0"
+    "font-awesome": "^4.7.0"
   }
 }

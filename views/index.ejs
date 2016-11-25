@@ -1,12 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Index</title>
-	<link rel="stylesheet" href="">
+	
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+
+	<link rel="stylesheet" href="../libs/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="alternate" href="../libs/bootstrap/dist/css/bootstrap-theme.min.css">
+
+	<script src="../libs/bootstrap/dist/js/bootstrap.min.js" type="text/javascript" charset="utf-8" async defer></script>
+
+	<script src="../libs/angular/angular.min.js" type="text/javascript" charset="utf-8" async defer></script>
+
+	<script src="../libs/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8" async defer></script>
+
 </head>
 <body>
+
+	<div class="container">
+
+		<header id="header">
+			<h1 class="h1 page-header text-center">Controle Patio</h1>
+		</header>
+
+		<div class="input-group">
+  			<span class="input-group-addon" id="basic-addon1">User Name</span>
+  			<input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">	
+		</div>
+
+		<div class="input-group">
+			<span class="input-group-addon" id="basic-addon1">Senha</span>
+  			<input type="text" class="form-control" placeholder="Senha" aria-describedby="basic-addon1">
+		</div>
+
+		<div class="divBtnAcessar">
+			<button type="button" class="btn btn-primary">Acessar!</button>
+		</div>
+
+		 <div class="ng-view">
+		 	
+		 </div>
+	</div>
 	
 </body>
 </html>

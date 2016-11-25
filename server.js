@@ -6,8 +6,11 @@ var app = express();
 // set port for web server
 var port = 1337;
 
+require('ejs');
+
 //disable layout
 app.set('view layout', {layout: false});
+app.set('views', __dirname + '/views');
 
 app.set('view engine', 'ejs');
 app.set('/', path.resolve(__dirname));
@@ -20,7 +23,7 @@ app.engine('html', require('ejs').renderFile);
 
 // server http get request/response
 app.get('/', function (req, res) {
-	res.render('index');
+	res.render('index.ejs');
 	console.log('GET: 200 index');
 });
 

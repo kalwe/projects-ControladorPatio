@@ -1,0 +1,17 @@
+.conteudo {
+	position: absolute;
+}
+
+.input-group {
+	margin : 15px;
+}
+
+.divBtnAcessar {
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.btn {
+	position: relative;	
+}

@@ -13,7 +13,7 @@
   "author": "Kalwe Caramalac <kalwe.dev@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "ejs": "^2.5.2",
     "express": "^4.14.0"
-    "ejs": "^1.0.0"
   }
 }
