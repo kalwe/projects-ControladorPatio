@@ -52,22 +52,27 @@
 			<h1 class="h1 page-header text-center"> {{title}} </h1>
 		</header>
 
-		<div class="input-group">
-  			<span class="input-group-addon" id="basic-addon1">User Name</span>
-  			<input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" ng-model="usuario.userName">	
+		<div class="row">
+			<div class=" input-group">
+  				<span class="input-group-addon" id="basic-addon1">User Name</span>
+  				<input type="text" class="form-control" placeholder="{{if (usuario.userName == '') }}" aria-describedby="basic-addon1" ng-model="usuario.userName">	
+			</div> 
+			<div class="input-group">
+				<span class="input-group-addon" id="basic-addon1">Senha</span>
+  				<input type="text" class="form-control" placeholder="Senha" aria-describedby="basic-addon1" ng-model="usuario.senha">
+			
+			</div>
 		</div>
- 
-		<div class="input-group">
-			<span class="input-group-addon" id="basic-addon1">Senha</span>
-  			<input type="text" class="form-control" placeholder="Senha" aria-describedby="basic-addon1" ng-model="usuario.senha">
-		</div>
+
+		<input type="text" name="txtUsuario" value="{{usuario.userName}}">
+		{{usuario.userName}}
 
 		<button type="button" class="btn btn-primary btnAcessar" ng-click="addUsuario()">Acessar!</button>
 
 	</div>	
 
 	<script  type="text/javascript">
-		console.log('Teste js from index.');
+		console.log('echo js from index');
 	</script>
 	
 </body>

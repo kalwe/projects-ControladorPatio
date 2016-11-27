@@ -1,12 +1,16 @@
 //require modules
 var express = require('express');
+//var routes = require('./routes');
+var http = require('http');
 var path = require('path');
+
 var app = express();
 
 // set port for web server
-var port = 1337;
+// var port = process.env.PORT || 1337;
+var __PORT = 1337;
 
-require('ejs');
+//require('ejs');
 
 //disable layout
 app.set('view layout', {layout: false});
@@ -19,20 +23,20 @@ app.use(express.static(path.resolve(__dirname)));
 
 app.engine('html', require('ejs').renderFile);
 
-
+app.set('port', process.env.PORT || 1337)
 
 // server http get request/response
 app.get('/', function (req, res) {
-	res.render('index.html');
+	res.render('index.ejs');
 	console.log('GET: 200 index');
 });
 
 // server functions
-var server = app.listen(port, function() {
+var server = app.listen(__PORT, function() {
 
-	var host = server.address().address;
-	var portServer = server.address().port;
+	var serverHOST = server.address().address;
+	var serverPORT = server.address().port;
 
-	console.log('SERVER RUNNING ON PORT: ' + port);
-	console.log('SERVER LISTENING AT http://%s:%s', host, portServer);
+	console.log('SERVER RUNNING ON PORT: ' + serverPORT);
+	console.log('SERVER LISTENING AT http://%s:%s', serverHOST, serverPORT);
 })

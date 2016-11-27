@@ -1,33 +1,3 @@
-(function () {
-
-	"use strict";
-	
-	var mypp = angular.module('myApp', ['ngRoute']);
-
-	myApp.config(function('$routeProvider') {
-		
-		$routeProvider.
-
-		when('/', {
-			template: 'index.ejs';
-		})
-		.when('/index', {
-			template: 'index.ejs';
-		})
-		.otherwise({
-			redirectTo: 'index.ejs';
-		})
-
-	});
-
-}());
-
-
-/*
-*    shit of CRUD video
-*    and need gonna to '~/server.js'
-*/
-
 app.use(app.route);
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -48,3 +18,24 @@ new usuarioRouteConfig(app);
 http.createServer(app).listen(app.get('port'), function() {
 	console.log('Express server listening on port ' + app.get('port'));
 });
+
+
+/*
+*    GET 
+*/
+
+export. = function(req, res) {
+	res.render('', {title: '', year: new Date().getFullYear() });
+};
+
+export.index = function(req, res) {
+	res.render('index', {title: 'myTitle', year: new Date().getFullYear() });
+};
+
+export. = function(req, res) {
+	res.render('', {title: 'about', year: new Date().getFullYear(), message: 'description page'});
+};
+
+export. = function(req, res) {
+	res.render('', {title: 'contact', year: new Date().getFullYear(), message: 'contact page'});
+};
