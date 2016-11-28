@@ -6,7 +6,7 @@ var appRoute = angular.module('appRoute', ['ngRoute'])
 				controller: 'indexControll'
 			});
 			$routeProvider.otherwise({
-				redirectTo: '/index'
+				redirectTo: '/index.html'
 			});
 
 			$locationProvider.html5Mode({enabled: true, requireBase: false});

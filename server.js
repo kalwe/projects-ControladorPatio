@@ -44,8 +44,7 @@ app.set('port', process.env.PORT || 1337)
 // server http get request/response
 
 app.get('/', function (req, res) {
-	//var footerText = "© Copyright 2016 Controlador de Patio.";
-	res.render('index.ejs', {footerText: '© Kalwe - Copyright 2016 Controlador de Patio.'});
+	res.render('index.html', {footerText: '© Kalwe - Copyright 2016 Controlador de Patio.'});	
 	console.log('GET: 200 index');
 });
 
