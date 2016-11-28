@@ -12,7 +12,7 @@ var myApp = angular.module('myApp', []);
 				$scope.usuario.push(angular.copy(usuario));
 				// deleta o objeto 'usuario' da memoria
 				alert("Logando no sistema");				
-				console.log('Usuario adicionado com sucesso. ' + usuario.pop());
+				console.log('Usuario adicionado com sucesso. ' + $scope.usuario);
 				delete $scope.usuario;
 			};
 
