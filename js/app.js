@@ -2,7 +2,7 @@
 
 	"use strict";
 	
-	var mypp = angular.module('myApp', ['ngRoute']);
+	var myApp = angular.module('myApp', ['ngRoute']);
 
 	myApp.config(function('$routeProvider') {
 		

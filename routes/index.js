@@ -1,3 +1,4 @@
+/*
 app.use(app.route);
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -19,11 +20,14 @@ http.createServer(app).listen(app.get('port'), function() {
 	console.log('Express server listening on port ' + app.get('port'));
 });
 
+*/
 
 /*
 *    GET 
 */
 
+
+/*
 export. = function(req, res) {
 	res.render('', {title: '', year: new Date().getFullYear() });
 };
@@ -32,10 +36,11 @@ export.index = function(req, res) {
 	res.render('index', {title: 'myTitle', year: new Date().getFullYear() });
 };
 
-export. = function(req, res) {
+export.about = function(req, res) {
 	res.render('', {title: 'about', year: new Date().getFullYear(), message: 'description page'});
 };
 
-export. = function(req, res) {
+export.contact = function(req, res) {
 	res.render('', {title: 'contact', year: new Date().getFullYear(), message: 'contact page'});
 };
+*/

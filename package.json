@@ -13,7 +13,12 @@
   "author": "Kalwe Caramalac <kalwe.dev@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
     "ejs": "^2.5.2",
-    "express": "^4.14.0"
+    "ejs-layout": "^1.0.3",
+    "express": "^4.14.0",
+    "express-ejs-layouts": "^2.2.0",
+    "express-layout": "^0.1.0"
   }
 }

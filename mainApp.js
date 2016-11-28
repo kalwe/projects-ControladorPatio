@@ -1,6 +1,6 @@
 angular.module('mainapp', ['eventModule'])
 .config([function () {
-	console.log('COndigure hook')
+	console.log('Configure hook')
 }])
 .run([function () {
 	console.log('Run hook');
