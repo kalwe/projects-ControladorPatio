@@ -44,9 +44,15 @@ app.set('port', process.env.PORT || 1337)
 // server http get request/response
 
 app.get('/', function (req, res) {
+	callIndex();
+});
+
+function callIndex () {
+	app.get('/index', function (req, res) {
 	res.render('index.html', {footerText: '© Kalwe - Copyright 2016 Controlador de Patio.'});	
 	console.log('GET: 200 index');
-});
+}); 
+}
 
 app.get('/index', function (req, res) {
 	res.render('index.html', {footerText: '© Kalwe - Copyright 2016 Controlador de Patio.'});	
