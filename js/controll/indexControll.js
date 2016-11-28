@@ -11,6 +11,7 @@ var myApp = angular.module('myApp', []);
 			$scope.addUsuario = function (usuario) {
 				$scope.usuario.push(angular.copy(usuario));
 				// deleta o objeto 'usuario' da memoria
+				alert('Ola' + usuario.userName);
 				delete $scope.usuario;
 				console.log('Usuario adicionado com sucesso.');
 			};
