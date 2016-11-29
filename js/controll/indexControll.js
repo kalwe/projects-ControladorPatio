@@ -11,7 +11,10 @@ var myApp = angular.module('myApp', []);
 			$scope.addUsuario = function (usuario) {
 				$scope.usuario.push(angular.copy(usuario));
 				// deleta o objeto 'usuario' da memoria
-				alert("Logando no sistema");				
+				
+				if (usuario.userName == '' && usuario.senha == '') {
+					alert("Preencha os todos os campos.");
+				}
 				console.log('Usuario adicionado com sucesso. ' + $scope.usuario.userName);
 				delete $scope.usuario;
 			};

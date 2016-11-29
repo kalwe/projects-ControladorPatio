@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="myApp">
+<head>
+	
+	<title>Index</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+	
+	<!-- Angular AngularRoute jQuery -->
+	<script type="text/javascript" src="../libs/jquery/dist/jquery.min.js"></script>
+	
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="../libs/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="alternate" href="../libs/bootstrap/dist/css/bootstrap-theme.min.css">
+	<script src="../libs/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+
+	<!-- Angular AngularRoute -->
+	<script type="text/javascript" src="../libs/angular/angular.js"></script>
+	<script src="../bower_components/angular-route/angular-route.min.js" type="text/javascript" charset="utf-8" async defer></script>	
+	
+	
+	<!-- EJS 
+	
+	-->
+	<script src="../libs/ejs/ejs.js" type="text/javascript"></script>
+
+	<!-- Font-Awesome -->
+	<script type="text/javascript" src="../libs/font-awesome/css/font-awesome.min.css"></script>
+
+	<!-- NgRoute Controll
+	<script src="../js/appRoute.js" type="text/javascript" charset="utf-8" async defer></script>
+	 -->	
+	<script src="../js/controll/indexControll.js" type="text/javascript" charset="utf-8" async defer></script>
+	
+	<!-- Templates 
+	<script src="../ejs/templates/footer.ejs" type="text/javascript" charset="utf-8" async defer></script>
+	-->
+
+</head>
+<body>
+
+	<div id="container" ng-controller="indexControll" class="container">
+
+	    <%- include('./formSingupTemplate') %>
+
+	    <footer>	        
+	        <%- include('./footer') %>
+	    </footer>
+	    
+	</div>
+
+	<script type="text/javascript">
+		console.log('echo js from index HTML');
+	</script>
+	
+</body>
+</html>
