@@ -26,10 +26,16 @@
 
 </head>
 <body>
+
 	<div class="container conteudo" ng-controller="routeCtl">
-		<a href="cadastro/cadastro.html">{{cadastrar}}</a>
-		<a href="/login/login.html">{{acessar}}</a>
-		<a href="home/home.html">HOME</a>
+		<a ng-class="{active: isActive('/cadastro/cadastro')}" href="cadastro/cadastro">{{cadastrar}}</a>
+		<a href="/login/login">{{acessar}}</a>
+		<a ng-class="{active: isActive('/home/home')}" href="/home/home">HOME</a>
 	</div>
+
+	<div ng-view>
+		
+	</div>
+
 </body>
 </html>

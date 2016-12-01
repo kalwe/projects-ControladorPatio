@@ -23,6 +23,33 @@
 }());
 
 
+var appRoute = angular.module('appRoute', ['ngRoute'])
+	.config(['$routeProvider', 
+		function($routeProvider) {
+			
+			$routeProvider.when('/index', {
+				templateUrl: '../views/index.html',
+				controller: 'indexControll'
+			}).when('/login', {
+				templateUrl: '../views/login.ejs',
+				controller: 'loginCtl'
+			}).when('/cadastro', {
+				templateUrl: '../views/cadastro/cadastro.html',
+				controller: 'cadastroController'
+			}).when('/*', {
+				templateUrl: '../views/error.ejs'
+			});
+			$routeProvider.otherwise({
+				redirectTo: '/index.html'
+			});
+
+			//$locationProvider.html5Mode({enabled: true, requireBase: false});
+
+		}])
+
+
+
+
 /*
 *    shit of CRUD video
 *    and need gonna to '~/server.js'
