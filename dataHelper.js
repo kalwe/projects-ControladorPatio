@@ -18,8 +18,9 @@ var usuario = {
 	ativo: true
 };
 
+var id = 1
 // SELECT
-connection.query('SELECT * FROM usuarios', function (err, result) {
+connection.query('SELECT * FROM usuarios where id = ?', connection.escape(id), function (err, result) {
 	if (err) {
 		console.error(err);
 		return;
