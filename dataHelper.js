@@ -1,29 +1,24 @@
+// requisita o modulo mysql para o nodejs
 var mysql = require('mysql');
 
+// define variaveis para a conecxao
 var connection = mysql.createConnection({
-	host: '127.0.0.1',
+	host: 'localhost',
 	user: 'root',
-	password: 'password',
 	database: 'usuarios',
 	multipleStatements: false
 })
 
+//cria uma conexao
 connection.connect();
 
 var usuario = {
-	userName: 'adm',
-	senha: 'adm',
+	userName: 'test',
+	senha: 'test',
 	ativo: true
 };
 
-connection.query('INSERT INTO usuarios SET ?', usuario, function (err, result) {
-	if (err) {
-		console.error(err);
-		return;
-	}
-	console.error(result);
-})
-
+// SELECT
 connection.query('SELECT * FROM usuarios', function (err, result) {
 	if (err) {
 		console.error(err);
@@ -32,14 +27,23 @@ connection.query('SELECT * FROM usuarios', function (err, result) {
 	console.log(result);
 })
 
-// website.com/usuarios?id=1; drop table usuarios;
-// website.com/usuarios?id='1; drop table usuarios;';
-var id = 1
-
-connection.query('SELECT * FROM usuarios WHERE id = ?' + connection.scape(id), function (err, result) {
+// INSERT
+connection.query('INSERT INTO usuarios SET ?', usuario, function (err, result) {
 	if (err) {
 		console.error(err);
 		return;
 	}
-	console.log(result);
+	console.error(result);
 })
+
+// website.com/usuarios?id=1; drop table usuarios;
+// website.com/usuarios?id='1; drop table usuarios;';
+//var id = 1
+
+//connection.query('SELECT * FROM usuarios WHERE id = ' + connection.escape(id), //function (err, result) {
+//	if (err) {
+//		console.error(err);
+//		return;
+//	}
+//	console.log(result);
+//};
