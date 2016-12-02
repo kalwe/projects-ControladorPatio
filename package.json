@@ -17,7 +17,8 @@
     "cookie-parser": "^1.4.3",
     "ejs": "^2.5.2",
     "express": "^4.14.0",
-    "mysql": "*",
-    "express-session": "^1.14.2"
+    "express-myconnection": "^1.0.4",
+    "express-session": "^1.14.2",
+    "mysql": "*"
   }
 }
