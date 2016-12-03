@@ -1,3 +1,6 @@
 body {
-	background-image: url('../imgs/index_background.jpg');
+	background: url('../imgs/index_background.jpg') no-repeat center center fixed;
+	background-size: cover;
+	background-color: black;
 }
+
