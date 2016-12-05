@@ -1,4 +1,4 @@
-appRoute.controller('routeCtl', ['$scope', '$http', function($scope, $http){
+appRoute.controller('routeCtl', ['$scope', function($scope){
 	
 	$scope.title = "Controlador de Patio";
 	$scope.acessar = "Acessar...";

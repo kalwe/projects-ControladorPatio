@@ -16,6 +16,7 @@
     "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",
     "ejs": "^2.5.2",
+    "ejs-locals": "^1.0.2",
     "express": "^4.14.0",
     "express-myconnection": "^1.0.4",
     "express-session": "^1.14.2",

@@ -14,11 +14,18 @@ var connection = mysql.createConnection({
 connection.connect();
 
 var id = 1;
-var usuario = {
-	userName: 'adm',
-	senha: 'adm',
+var usuario = [
+	{
+	userName: 'kalwe',
+	senha: 'kalwe',
 	ativo: true
-};
+	};
+	{
+	userName: 'aline',
+	senha: 'aline',
+	ativo: true
+	}
+];
 
 // INSERT
 connection.query('INSERT INTO usuarios SET ?', usuario, function (err, result) {
