@@ -96,10 +96,10 @@ app.get('/usuario', function (req, res) {
 function usuario(nome, senha,  ativo) {
 
   self = this;
-  // self.id = id;
+  self.id = id;
   self.nome = nome;
   self.senha = senha;
-  //self.dataCriacao = dataCriacao;
+  self.dataCriacao = dataCriacao;
   self.ativo = ativo;
   
 };
@@ -157,9 +157,9 @@ app.get('/api/getUsuario', function(req, res, next) {
 			{
 
 				
-				var senha = req.param('nome');
+				var nome = req.param('nome');
 				//var selectSql = '';
-				conn.query('SELECT * FROM usuarios WHERE senha = ?', senha, function (err, result, rows) {
+				conn.query('SELECT * FROM usuarios WHERE userName = ?', nome, function (err, result, rows) {
 					if (err) {					
 						console.error('SQL error: ', err);
 						return next(err);
@@ -196,14 +196,14 @@ app.post('/api/createUsuario', function(req, res, next) {
 
         var usuarios = new Array(usuario);
 
-        for(usuario in req.body.usuario) {
+        for(i in req.body.usuario) {
 
         	 
 
-        	id = req.body.id;
-        	nome = req.body.usuario.nome;
-        	ativo = req.body.usuario.ativo;
-			senha = req.body.usuario.senha;
+        	id = req.body.usuario[i].id;
+        	nome = req.body.usuario[i].nome;
+        	ativo = req.body.usuario[i].ativo;
+			senha = req.body.usuario[i].senha;
 
         	//var usuario = usuario(id, nome, ativo, senha);
 

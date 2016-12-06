@@ -28,4 +28,8 @@ var appRoute = angular.module('appRoute', ['ngRoute'])
 			// remove o # da url
    			//$locationProvider.html5Mode(true);
 
-		}])
+		}]);
+
+appRoute.controller('appRoute', ['$scope', function ($scope) {
+	$scope.title = "Controlador de Patio";
+}]);
